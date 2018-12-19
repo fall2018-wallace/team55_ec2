@@ -23,7 +23,7 @@ clean_data_full=clean_data
 data = clean_data
 dim(data) 
 indexes1 = sample(1:nrow(data), size=0.75*nrow(data))
- # 32 11
+
 75data = data[indexes1,]
 dim(75data) 
 
