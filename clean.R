@@ -20,20 +20,8 @@ clean_data$southeast<-as.factor(trimws(clean_data$Airline.Name)=='Southeast Airl
 unique(clean_data$Satisfaction)
 clean_data_full=clean_data
 
-data = clean_data
-dim(data)  # 32 11
- 
-#Sample Indexes
-indexes = sample(1:nrow(data), size=0.25*nrow(data))
- 
-# Split data
-test = data[indexes,]
-dim(test)  
-train = data[-indexes,]
-dim(train) 
-clean_data = train
 
-#sample = sample.split(clean_data$Age, SplitRatio = .67)
-#train = subset(clean_data, sample == TRUE)
-#test  = subset(clean_data, sample == FALSE)
-#clean_data = train
+sample = sample.split(clean_data$Age, SplitRatio = .67)
+train = subset(clean_data, sample == TRUE)
+test  = subset(clean_data, sample == FALSE)
+clean_data = train
