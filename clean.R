@@ -20,11 +20,12 @@ clean_data$southeast<-as.factor(trimws(clean_data$Airline.Name)=='Southeast Airl
 unique(clean_data$Satisfaction)
 clean_data_full=clean_data
 
-
-
 data = clean_data
-dim(data)  # 32 11
-
+dim(data) 
+indexes1 = sample(1:nrow(data), size=0.75*nrow(data))
+ # 32 11
+75data = data[indexes1,]
+dim(75data) 
 #Sample Indexes
 indexes = sample(1:nrow(data), size=0.25*nrow(data))
 
