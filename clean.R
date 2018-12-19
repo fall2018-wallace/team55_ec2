@@ -26,12 +26,13 @@ indexes1 = sample(1:nrow(data), size=0.75*nrow(data))
  # 32 11
 75data = data[indexes1,]
 dim(75data) 
-#Sample Indexes
-indexes = sample(1:nrow(data), size=0.25*nrow(data))
+
+#Sample Indexes for train and test
+indexes = sample(1:nrow(75data), size=0.25*nrow(75data))
 
 # Split data
-test = data[indexes,]
+test = 75data[indexes,]
 dim(test)  
-train = data[-indexes,]
+train = 75data[-indexes,]
 dim(train) 
 clean_data = train
