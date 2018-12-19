@@ -24,15 +24,15 @@ data = clean_data
 dim(data) 
 indexes1 = sample(1:nrow(data), size=0.75*nrow(data))
 
-75data = data[indexes1,]
-dim(75data) 
+dataseventyfive = data[indexes1,]
+dim(dataseventyfive) 
 
 #Sample Indexes for train and test
-indexes = sample(1:nrow(75data), size=0.25*nrow(75data))
+indexes = sample(1:nrow(dataseventyfive), size=0.25*nrow(dataseventyfive))
 
 # Split data
-test = 75data[indexes,]
+test = dataseventyfive[indexes,]
 dim(test)  
-train = 75data[-indexes,]
+train = dataseventyfive[-indexes,]
 dim(train) 
 clean_data = train
